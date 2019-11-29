@@ -1,0 +1,122 @@
+/usr/bin/bash: XFT: command ntntialias:  true 
+Xft.autohint:   false 
+Xft.dpi:        96
+Xft.hinting:    true 
+Xft.hintstyle:  hintfull 
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+
+
+!-------------------------------------------
+! XTerm - Settings
+
+XTerm.vt100.locale:     true
+XTerm*faceName:         Inconsolata\ Nerd\ Font\ Complete:size=14
+
+!-------------------------------------------
+! URXVT - Settings
+
+URxvt*depth:                        32
+URxvt*internalBorder:               3
+URxvt*dynamicColors:                on
+URxvt*urgentOnBell:                 true
+URxvt*borderLess:                   false
+URxvt*scrollBar:                    false
+URxvt*cursorBlink:                  true
+URxvt*cursorUnderline:              true
+URxvt*cursorColor:                  #737077
+URxvt*scrollColor:                  #151515
+URxvt*underlineURLs:                true
+
+! with tamsyn
+! URxvt*letterSpace:                  0.3
+
+! Disable perl
+!URxvt.perl-ext:                 
+!URxvt.perl-ext-common: 
+
+! URxvt.font: xft:Inconsolata\ Nerd\ Font\ Complete:size=12:style=Regular
+! URxvt*font: -*-dina-medium-r-*-*-*-90-*-*-*-*-*-*
+! URxvt*italic: -*-dina-medium-*-*-*-*-90-*-*-*-*-*-*
+! URxvt*boldFont: -*-dina-bold-r-*-*-*-90-*-*-*-*-*-*
+!URxvt*font: -*-marathonmod-*-*-*-*-14-*-*-*-*-*-*-*
+URxvt*font: -*-dejavu sans mono-*-*-*-*-14-*-*-*-*-*-*-*
+!Urxvt*font: -*-tewii-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*font: -*-marathon-medium-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont: -*-marathon-bold-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont: -*-marathon-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont: xft:Tamsyn:style=Bold:pixelsize=16
+ 
+!--------------------------------------------
+! URxvt Colors
+
+URxvt.colorIT:                       #b291af
+URxvt.colorBD:                       #6f6776
+URxvt.colorUL:                       #e9cfd3
+
+!--------------------------------------------
+! General Colors
+
+*background:    #000405
+*foreground:    #9aa8a9
+*.cursorColor:  #2a2a20
+
+!black
+*color0: #071b1e
+*color8: #405155
+!red
+*color1: #62394c
+*color9: #875157
+!green
+*color2: #34776d
+*color10: #619d8e
+!yellow
+*color3: #d1aa54
+*color11: #f6d586
+!blue
+*color4: #2f4653
+*color12: #5b7681
+!magenta
+*color5:  #403248
+*color13: #644d5e
+!cyan
+*color6: #276f7b
+*color14:  #67a0a5
+!white
+*color7:  #bccecd
+*color15: #f9fffd
+
+!-------------------------------------------
+! Man pages colors
+
+*VT100.colorBDMode:                  true
+*VT100.colorBD:                      red
+*VT100.colorULMode:                  true
+*VT100.colorUL:                      cyan   
+*VT100.veryBoldColors:               6
+
+!-------------------------------------------
+! xclock
+
+xclock*majorColor:                  #9a875f
+xclock*minorColor:                  #9a875f
+xclock*minuteColor:                 #9a875f
+xclock*hourColor:                   #9a875f
+xclock*secondColor:                 #9a875f
+
+!-------------------------------------------
+! rofi
+
+rofi.lines:                         6
+rofi.color-enabled:                 true
+rofi.separator-style:               none 
+rofi.width:                         40
+! rofi state:                          'bg'     'fg'     'bgalt'     'hlbg'    'hlfg'
+! Color scheme for normal row
+rofi.color-normal:                   argb:00000000, #6a8582, argb:00000000, #000405,#e1ede3
+! Color scheme for urgent row
+rofi.color-urgent:                   argb:00000000, #6a8582, argb:00000000, #000405,#e1ede3
+! Color scheme for active row
+rofi.color-active:                   argb:00000000, #6a8582, argb:00000000, #000405,#e1ede3
+! Color scheme window
+rofi.color-window:                   argb:99000405, #000,#6a8582 found
