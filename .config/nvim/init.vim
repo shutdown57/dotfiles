@@ -54,8 +54,8 @@ set scrolloff=5
 :map <F8> :setlocal spell! spelllang=en_us<CR>
 :set pastetoggle=<F2>
 
-let g:python_host_prog = '~/.pyenv/versions/nvim2/bin/python'
-let g:python3_host_prog = '~/.pyenv/versions/nvim3/bin/python'
+let g:python_host_prog = '~/.virtualenvs/nvim2/bin/python'
+let g:python3_host_prog = '~/.virtualenvs/nvim3/bin/python'
 
 
 " ########################################__Plug__##################################################
@@ -72,16 +72,16 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Language
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'moll/vim-node'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'nvie/vim-ini'
 Plug 'hiphish/jinja.vim'
 Plug 'tpope/vim-markdown'
 Plug 'sheerun/vim-polyglot'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'stanangeloff/php.vim'
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 Plug 'phpactor/phpactor', { 'do' : ':call phpactor#Update()', 'for' : 'php' }
@@ -96,9 +96,11 @@ Plug 'https://github.com/ap/vim-css-color'
 Plug 'chrisbra/unicode.vim'
 Plug 'jceb/vim-orgmode'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Other
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'mattn/emmet-vim'
 Plug 'liuchengxu/vim-which-key' ", { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'vim-scripts/utl.vim'
@@ -127,7 +129,7 @@ Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
-" Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -141,6 +143,16 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'simnalamburt/vim-mundo'
+Plug 'jiangmiao/auto-pairs'
+Plug 'adelarsq/vim-devicons-emoji'
+Plug 'voldikss/vim-floaterm'
+
+" COLORS
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+
 
 " Initialize plugin system
 call plug#end()
@@ -218,15 +230,16 @@ let g:startify_bookmarks = [
         \ '~/.config/mutt/muttrc',
         \ '~/.config/ranger/rc.conf',
         \ '~/.config/i3/config',
-        \ '~/Workspace/PHP/lara-shop/',
-        \ '~/Workspace/NodeJS/Start/front/',
-        \ '~/Workspace/Python/Current/Dev/',
-        \ '~/Workspace/Python/Current/devdiaries/',
-        \ '~/Workspace/NodeJS/app/',
-        \ '~/Workspace/NodeJS/nuclear/',
-        \ '~/Workspace/Python/own/new_up/',
-        \ '~/Workspace/Python/VoTask/',
-        \ '~/Workspace/Python/BuySys/',
+        \ '~/First/Workspace/PHP/lara-shop/',
+        \ '~/First/Workspace/NodeJS/link/front/',
+        \ '~/First/Workspace/NodeJS/link/back/',
+        \ '~/First/Workspace/Python/Current/Dev/',
+        \ '~/First/Workspace/Python/Current/devdiaries/',
+        \ '~/First/Workspace/NodeJS/app/',
+        \ '~/First/Workspace/NodeJS/nuclear/',
+        \ '~/First/Workspace/Python/own/new_up/',
+        \ '~/First/Workspace/Python/VoTask/',
+        \ '~/First/Workspace/Python/BuySys/',
         \ ]
 let NERDTreeHijackNetrw = 1
 let g:startify_fortune_use_unicode = 1
@@ -315,7 +328,7 @@ let s:git_orange = 'F54D27'
 let g:NERDTreeLimitedSyntax = 1
 
 " NerdTree Git__######################################
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -538,8 +551,11 @@ let g:vista#renderer#icons = {
 \  }
 
 " YouCompleteMe
-let g:ycm_filetype_specific_completion_to_disable = {
-      \ 'python': 1
-      \}
+" let g:ycm_filetype_specific_completion_to_disable = {
+"       \ 'python': 1
+"       \}
 
-colorscheme dracula
+" colorscheme dracula
+" colorscheme challenger_deep
+" colorscheme gruvbox
+colorscheme onedark
